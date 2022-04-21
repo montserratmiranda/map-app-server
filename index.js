@@ -29,4 +29,3 @@ app.use('/ideas', ideaRoutes);
 //Listener
 app.listen(PORT, () => {console.log(`Listening on port ${PORT}`)});
 
-//test
