@@ -8,7 +8,7 @@ import ideaRoutes from './routes/idea.js';
 
 //App Config
 const app = express();
-const PORT = process.env.port || 3001;
+const PORT = process.env.PORT || 3001;
 const connectionURL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.kclfc.mongodb.net/map-appDB?retryWrites=true&w=majority`;
 
 //Middlewares
