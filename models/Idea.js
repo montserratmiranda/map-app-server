@@ -5,20 +5,25 @@ const ideaSchema = mongoose.Schema({
         type: String,
         require: true,
     },
-    userId: {
+    username: {
         type: String,
         require: true,
     },
-    countryID: {
+    lat: {
         type: Number,
         require: true,
+    },
+    long: {
+        type: Number,
+        require: true,
+        min: 8,
     },
     category: {
         type: Number,
         require: true,
         enum: [1,2,3,4,5,6,7]
     },
-    ideaBackground: {
+    desc: {
         type: String,
         require: true,
     },
