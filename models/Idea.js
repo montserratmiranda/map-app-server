@@ -35,9 +35,6 @@ const ideaSchema = mongoose.Schema({
         type: String,
         require: true,
     },
-    imageUrl: {
-        type: String,
-    },
     likes: {
         type: Array,
         default: [],

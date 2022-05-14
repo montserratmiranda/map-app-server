@@ -29,13 +29,13 @@ export const loginUser = async (req, res)=> {
     try {
         //find user
         const user = await User.findOne({email:req.body.email})
-        !user && res.status(400).json("Incorrect username or password");
+        !user && res.status(400).json("Incorrect email or password");
         //validate password
         const validPass = await bcrypt.compare(
             req.body.password,
             user.password
         );
-        !validPass && res.status(400).json("Incorrect username or password");
+        !validPass && res.status(400).json("Incorrect email or password");
         //send response
          res.status(200).json({_id: user._id, username: user.username });
     } catch (error) {

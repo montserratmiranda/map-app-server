@@ -1,5 +1,5 @@
 import Idea from '../models/Idea.js';
-import User from '../models/User.js';
+
 //create new idea
 export const createIdea = async (req, res)=> {
     const newIdea = new Idea(req.body);

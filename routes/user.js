@@ -3,7 +3,7 @@ import { createUser, loginUser, getUsers, updateUser, deleteUser } from '../cont
 const router = express.Router();
 
 router.post('/signup', createUser);
-router.get('/login', loginUser);
+router.post('/login', loginUser);
 router.get('/', getUsers);
 router.put('/:id', updateUser);
 router.delete('/:id', deleteUser);

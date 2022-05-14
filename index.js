@@ -3,7 +3,6 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import userRoutes from './routes/user.js';
-import markerRoutes from './routes/marker.js';
 import ideaRoutes from './routes/idea.js';
 
 //App Config
@@ -23,7 +22,6 @@ mongoose.connect(connectionURL, {useNewUrlParser: true, useUnifiedTopology: true
 
 //API Endpoints
 app.use('/users', userRoutes);
-app.use('/markers', markerRoutes);
 app.use('/ideas', ideaRoutes);
 
 //Listener
