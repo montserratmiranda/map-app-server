@@ -9,7 +9,7 @@ import ideaRoutes from './routes/idea.js';
 const app = express();
 const PORT = process.env.PORT || 3001;
 const connectionURL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.kclfc.mongodb.net/map-appDB?retryWrites=true&w=majority`;
-
+st
 //Middlewares
 app.use(express.json());
 app.use(cors());
