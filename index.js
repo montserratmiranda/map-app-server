@@ -3,6 +3,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import userRoutes from './routes/user.js';
 import ideaRoutes from './routes/idea.js';
+import cors from 'cors';
 
 //App Config
 const app = express();
@@ -11,6 +12,7 @@ const connectionURL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB
 
 //Middlewares
 app.use(express.json());
+app.use(cors());
 
 //DB Config
 mongoose.connect(connectionURL, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
