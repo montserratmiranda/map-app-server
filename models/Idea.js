@@ -9,14 +9,13 @@ const ideaSchema = mongoose.Schema({
         type: String,
         require: true,
     },
-    lat: {
-        type: Number,
-        require: true,
-    },
     long: {
         type: Number,
         require: true,
-        min: 8,
+    },
+    lat: {
+        type: Number,
+        require: true,
     },
     category: {
         type: Number,
