@@ -3,12 +3,11 @@ import bcrypt from 'bcrypt';
 
 //sign up
 export const createUser = async (req, res)=> {
-    const user = req.body;
-    const newUser = new User(user);
     try {
         //generate secure password
         const salt = await bcrypt.genSalt(11);
         const hashedPassword = await bcrypt.hash(req.body.password, salt)
+        
         //create new user
         const newUser = await new User({
             username: req.body.username,
@@ -28,7 +27,7 @@ export const createUser = async (req, res)=> {
 export const loginUser = async (req, res)=> {
     try {
         //find user
-        const user = await User.findOne({email:req.body.email})
+        const user = await User.findOne({ username:req.body.username });
         !user && res.status(400).json("Incorrect email or password");
         //validate password
         const validPass = await bcrypt.compare(
