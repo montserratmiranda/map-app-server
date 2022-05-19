@@ -18,9 +18,9 @@ const ideaSchema = mongoose.Schema({
         require: true,
     },
     category: {
-        type: Number,
+        type: String,
         require: true,
-        enum: [1,2,3,4,5,6,7]
+        enum: ['Arts', 'Sports', 'History', 'Geography', 'Social Studies', 'Food']
     },
     desc: {
         type: String,
